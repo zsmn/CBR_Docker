@@ -99,7 +99,7 @@ binFolder='myBin' # Binary folder name
 
 cd $scriptWD
 cd $binFolder
-./binarie &> /dev/null &
+./binary &> /dev/null &
 ```
 
 This will cause you to create a process that will run your binary, so you can create a shell script that runs all your binaries, if you have more than one.
