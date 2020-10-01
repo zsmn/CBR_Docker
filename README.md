@@ -91,7 +91,7 @@ As all dependencies will be installed (process done during the compilation of `D
 That done, you will now be able to run the binaries and run your software =)
 
 ### Running multiple binaries
-It is possible to run multiple binaries in a single terminal opened by the docker. To do this, use the following command:
+It is possible to run multiple binaries in a single terminal opened by the docker. To do this, use the `&> /dev/null &` command after run your binary, as follows:
 
 ```bash
 scriptWD='pwd'    # WORK_DIR name
