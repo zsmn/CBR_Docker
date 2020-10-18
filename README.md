@@ -6,12 +6,13 @@ See [this](https://docs.docker.com/engine/install/ubuntu/#installation-methods) 
 
 ## Starting Docker
 
-Once with the docker and the repository, you will have the files `Dockerfile`, `dockerbuild.sh` and `rundocker.sh`. 
+Once with the docker and the repository, you'll have the files `Dockerfile`, `dockerbuild.sh` and `rundocker.sh`. 
 
 ### Dockerfile
-This is where the terminal commands are executed. Take the opportunity to download the dependencies (following the template provided) and, if necessary, you can also download external libraries using commands as if you were in a terminal.
+This file creates a environment image with Ubutu 18.04 and preliminar libraries. Use `RUN` to run shell commands. Take the opportunity to download the dependencies (following the template provided) and, if necessary, you can also download external libraries using commands as if you were in a terminal.
 
-Remember, for each command, use the `RUN` tag first!
+Remember, for each command, use the `RUN` tag first! 
+Tip! Add new commands at the end of the file. Docker is smart and saves checkpoint images.
 ```
 FROM ubuntu:18.04
 
@@ -28,7 +29,7 @@ RUN apt-get update && apt-get install -y \
 ```
 
 ### dockerbuild.sh
-This shell script is responsible for building the docker. If you want, you can change `nomedodocker` to a name of your project (by default is `docker`), but remember to modify it on the `rundocker.sh` file too.
+This shell script is responsible for building the docker. please, remember to change `nomedodocker` to a name of your project (by default is `docker`), but also remember to modify it on the `rundocker.sh` file too.
 
 ```
 # Evitar erro com o uso de video
